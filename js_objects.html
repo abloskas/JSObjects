@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS objects</title>
+</head>
+<body>
+    <script>
+    let students = [
+    {name: 'Remy', cohort: 'Jan'},
+    {name: 'Genevieve', cohort: 'March'},
+    {name: 'Chuck', cohort: 'Jan'},
+    {name: 'Osmund', cohort: 'June'},
+    {name: 'Nikki', cohort: 'June'},
+    {name: 'Boris', cohort: 'June'}
+];
+
+ function printStudents(arr) {
+     console.log(students);
+     for (let i=0; i<arr.length; i++){
+
+         console.log(`Name: ${arr[i].name}, cohort: ${arr[i].cohort}`);
+     };
+    };
+    printStudents(students);
+
+    let users = {
+    employees: [
+        {'first_name':  'Miguel', 'last_name' : 'Jones'},
+        {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+        {'first_name' : 'Nora', 'last_name' : 'Lu'},
+        {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+    ],
+    managers: [
+       {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+       {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+    ]
+ };
+
+ function printEmployees(obj){
+     for (key in obj){ 
+     console.log(users);
+     for (let x=0; x<obj[key].length; x++){
+         console.log(`${x+1} - ${obj[key][x].last_name}, ${obj[key][x].first_name} - ${obj[key][x].last_name.length +obj[key][x].first_name.length} `)
+     }
+    }
+ }
+
+ printEmployees(users);
+
+
+    </script>
+</body>
+</html>
